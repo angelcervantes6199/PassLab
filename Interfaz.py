@@ -83,7 +83,7 @@ def toggle_password():
     global mostrando
     mostrando = not mostrando
     entry_password.config(show="" if mostrando else "*")
-    btn_ver.config(text="🙈" if mostrando else "👁")
+    btn_ver.config(text="$" if mostrando else "👁")
 
 # ------------------ UI ------------------
 

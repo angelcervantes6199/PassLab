@@ -1,7 +1,7 @@
 import os #modulo que permite trabajar con el sistema operativo
 import hashlib #modulo que permite crear hash's 
 import base64 #siver para codificar y decodificar con base en el formato Base64
-import hmac #
+import hmac #combina la funcion hash
 
 # Genera un salt aleatorio para cada usuario
 def generar_salt():
