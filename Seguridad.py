@@ -6,21 +6,16 @@ import hmac #combina la funcion hash
 # Genera un salt aleatorio para cada usuario
 def generar_salt():
     salt = os.urandom(16)  
-    return base64.b64encode(salt).decode("utf-8")#codifica
-#crea 16 bytes aleatoreos
-#salt es un valor agregador a cada contraseña 
-#depues codifica los bytes al formato Base64 para guardarlos en texto  
-#Evita que dos usuarios con la misma contraseña tengan el mismo hash.
-#Hace más difícil un ataque con tablas rainbow.
+    return base64.b64encode(salt).decode("utf-8")
 
 
 # Aplica PBKDF2-HMAC-SHA256 a la contraseña con el salt
 def hash_password(password: str, salt: str) -> str:
-    password_bytes = password.encode("utf-8") #1 covierte la contraseña a bytes 
-    salt_bytes = base64.b64decode(salt.encode("utf-8"))#decodifica salt que estaba b64 a bits 
+    password_bytes = password.encode("utf-8")  
+    salt_bytes = base64.b64decode(salt.encode("utf-8"))
 
     dk = hashlib.pbkdf2_hmac("sha256", password_bytes, salt_bytes, 100_000)#Aplica PBKDF2-HMAC-SHA256 lo realiza 1k de veses 
-    return base64.b64encode(dk).decode("utf-8")#codifica Dk que es el timo hash en B64 
+    return base64.b64encode(dk).decode("utf-8")
 
 # Compara una contraseña en texto contra el hash almacenado
 def verificar_password(password: str, salt: str, hash_almacenado: str) -> bool:

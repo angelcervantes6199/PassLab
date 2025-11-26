@@ -22,5 +22,17 @@
     "akaaaaa": {
         "salt": "2LV5ILzQJmsqjEmXAG+C4A==",
         "password_hash": "fLeiUeUkxBoFNDj7l4NkrB/MiBNtp23CsBZDWIUPyp8="
+    },
+    "akz": {
+        "salt": "4QcFFrj0unfFLaObcym9/Q==",
+        "password_hash": "qJb7Q+jNZI6v8hTmUmf4MOb7PyQ+POhvdh5x2n2RZQ4="
+    },
+    "zaid": {
+        "salt": "o+Y7H3vfykyK6GcdyZP4XA==",
+        "password_hash": "6pqfMuDWBD5RFmz2lL504OE7W/Z2ylOcPNSqOY3MgbU="
+    },
+    "zaid2": {
+        "salt": "6D73sotQa1SH1xqxRSbs4Q==",
+        "password_hash": "J2eEcSmyLM3qNvAXm0jMy01FjoPpgdi3zkejDJ84DRM="
     }
 }
